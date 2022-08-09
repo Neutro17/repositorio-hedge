@@ -1,0 +1,116 @@
+
+.masthead {
+    background-color: $gray-100;
+  
+    padding-top: 5rem + 4.5rem;
+    padding-bottom: 5rem;
+
+    .masthead-device-mockup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .circle {
+            position: absolute;
+            fill: url(#circleGradient);
+            width: 70%;
+            display: none;
+
+            .gradient-start-color {
+                stop-color: $primary;
+            }
+
+            .gradient-end-color {
+                stop-color: $secondary;
+            }
+        }
+
+        .shape-1 {
+            position: absolute;
+            height: 1rem;
+            width: 1rem;
+            transform: rotate(-10deg);
+            fill: $primary;
+
+            bottom: 15%;
+            left: 10%;
+        }
+
+        .shape-2 {
+            position: absolute;
+            height: 0.75rem;
+            width: 0.75rem;
+            fill: $primary;
+
+            top: 15%;
+            right: 10%;
+        }
+
+        .device-wrapper {
+            max-width: 10rem;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .masthead-device-mockup {
+            .circle {
+                width: 70%;
+                display: block;
+            }
+
+            .device-wrapper {
+                max-width: 12.5rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .masthead-device-mockup {
+            .circle {
+                width: 60%;
+            }
+
+            .device-wrapper {
+                max-width: 15rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .masthead-device-mockup {
+            .circle {
+                width: 90%;
+            }
+
+            .device-wrapper {
+                max-width: 15rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .masthead-device-mockup {
+            .circle {
+                width: 75%;
+            }
+
+            .device-wrapper {
+                max-width: 15rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        .masthead-device-mockup {
+            .circle {
+                width: 70%;
+            }
+
+            .device-wrapper {
+                max-width: 17rem;
+            }
+        }
+    }
+
+}
